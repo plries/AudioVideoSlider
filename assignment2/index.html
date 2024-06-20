@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="swiper.css">
     <style>
 
-        body {
-            background-color: #202020;
-            color: #bebebe;
+        html {
+            font-size: 62.5%;
             font-family: monospace;
+        }
+
+        body {
+            background: hsla(0, 0%, 13%, 1);
+            background: linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);
+            background: -moz-linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);
+            background: -webkit-linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);  
         }
 
         section {
@@ -19,31 +25,108 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
+            display: flex;    
+            flex-direction: column;     
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
-            text-align: center;
-            font-variant: small-caps;
-            font-size: 24px;
-            margin-top: 0;
+            color: white;
+            font-size: 3.2rem;
+            margin: 2.4rem 0;
+        }
+        
+        button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            font-size: 1.4rem;
+            border-radius: 4px;
+            border: none;
+            padding: 8px 16px;
+            background: white;
+            margin: 2.4rem 0;
+            transition: all ease-in-out 0.25s;
+            svg > path {
+                transition: all ease-in-out 0.25s;
+            }
+            span {
+                transition: all ease-in-out 0.25s;
+                color: #202020;
+            }
         }
 
-        .video:hover {
-            cursor: url(../volume-high-solid.svg), auto;
+        button:hover {
+            background-color: #496f74;
+            svg > path {
+                fill: white;
+            }
+            span {
+                color: white;
+            }
         }
 
         .swiper-container {
             text-align: center;
-            width: calc(100% - 20px);
+            width: calc(90% - 20px);
+            background-color: #202020;
+            border-radius: 16px;
+            padding: 50px 0;
         }
 
         .swiper-slide > img,
         .swiper-slide > video {
             width: 960px;
+            border-radius: 12px;
+            transition: all ease-in-out 0.25s;
+            filter: saturate(0);
+        }
+
+        .swiper-slide > img:hover,
+        .swiper-slide > video:hover {
+            cursor: url("./icons/bird-solid.svg"), auto;
+            filter: saturate();
+            scale: 1.1;
+        }
+
+        .swiper-button-next {
+            background-image: url("./icons/circle-right-solid.svg");
+            transition: all ease-in-out 0.25s;
+        }
+
+        .swiper-button-prev {
+            background-image: url("./icons/circle-left-solid.svg");
+            transition: all ease-in-out 0.25s;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            scale: 1.5;
         }
 
         @media screen and (max-width: 1440px) {
 
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .swiper-slide {
+                img, video {
+                    width: 600px;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+
+            h1 {
+                font-size: 2rem;
+            }
+            
             .swiper-slide {
                 img, video {
                     width: 400px;
@@ -52,17 +135,11 @@
 
         }
 
-        @media screen and (max-width: 1024px) {
-            
-            .swiper-slide {
-                img, video {
-                    width: 300px;
-                }
+        @media screen and (max-width: 425px) {
+
+            h1 {
+                font-size: 1.6rem;
             }
-
-        }
-
-        @media screen and (max-width: 768px) {
             
             .swiper-slide {
                 img, video {
@@ -77,32 +154,37 @@
 <body>
 
     <section>
-        <h1>natural landscapes</h1>    
+        <h1>NATURAL LANDSCAPES</h1>    
             <!-- Slider main container -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <img src="./media/hills.jpg" alt="">
+                    <img class="image" src="./media/hills.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <video class="video" src="./media/drone.mp4" alt="">
+                    <video class="video image" src="./media/drone.mp4" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./media/coast.jpg" alt="">
+                    <img class="image" src="./media/coast.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./media/mountains.jpg" alt="">
+                    <img class="image" src="./media/mountains.jpg" alt="">
                 </div>
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
+
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" height="14" width="15.75" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#202020" d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+            <span>STOP</span>
+        </button>
     </section>
 
-<script src="./video.js"></script>
+<script src="./script.js"></script>
 <script src="./swiper.js"></script>
 <script>
     var mySwiper = new Swiper('.swiper-container', {
@@ -116,8 +198,8 @@
     centeredSlides: true,
     slidesPerView: 'auto',
     coverflowEffect: {
-        rotate: 50,
-        stretch: 1000,
+        rotate: 25,
+        stretch: 900,
         depth: 200,
         modifier: 1,
         slideShadows: false,
@@ -125,22 +207,17 @@
     breakpoints: {
         1440: {
             coverflowEffect: {
-                stretch: 800,
-            },
-        },
-        1024: {
-            coverflowEffect: {
-                stretch: 500,
+                stretch: 450,
             },
         },
         768: {
             coverflowEffect: {
-                stretch: 300,
+                stretch: 250,
             },
         },
         425: {
             coverflowEffect: {
-                stretch: 200,
+                stretch: 150,
             },
         },
     },
