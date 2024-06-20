@@ -117,12 +117,13 @@ button:hover {
     }
 
     button {
+        gap: 12px;
     svg {
-        height: 20px;
-        width: 20px;
+        height: 16px;
+        width: 16px;
     }
     span {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     }
 
@@ -141,13 +142,13 @@ button:hover {
     }
 
     button {
-        gap: 12px;
+        gap: 10px;
     svg {
-        height: 16px;
-        width: 16px;
+        height: 14px;
+        width: 14px;
     }
     span {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     }
     
@@ -167,13 +168,6 @@ button:hover {
 
     button {
         gap: 8px;
-    svg {
-        height: 14px;
-        width: 14px;
-    }
-    span {
-        font-size: 1.4rem;
-    }
     }
     
     .swiper-slide {
