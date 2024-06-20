@@ -4,188 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AV Mashup</title>
-    <link rel="stylesheet" href="swiper.css">
-    <style>
-
-        html {
-            font-size: 62.5%;
-            font-family: monospace;
-        }
-
-        body {
-            background: hsla(0, 0%, 13%, 1);
-            background: linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);
-            background: -moz-linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);
-            background: -webkit-linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);  
-        }
-
-        section {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            display: flex;    
-            flex-direction: column;     
-            align-items: center;
-            justify-content: center;
-        }
-
-        h1 {
-            color: white;
-            font-size: 3.2rem;
-            margin: 2.4rem 0;
-        }
-        
-        button {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: bold;
-            font-size: 1.4rem;
-            border-radius: 4px;
-            border: none;
-            padding: 8px 16px;
-            background: white;
-            margin: 2.4rem 0;
-            transition: all ease-in-out 0.25s;
-            svg > path {
-                transition: all ease-in-out 0.25s;
-            }
-            span {
-                transition: all ease-in-out 0.25s;
-                color: #202020;
-            }
-        }
-
-        button:hover {
-            background-color: #496f74;
-            svg > path {
-                fill: white;
-            }
-            span {
-                color: white;
-            }
-        }
-
-        .swiper-container {
-            text-align: center;
-            width: calc(90% - 20px);
-            background-color: #202020;
-            border-radius: 16px;
-            padding: 50px 0;
-        }
-
-        .swiper-slide > img,
-        .swiper-slide > video {
-            width: 960px;
-            border-radius: 12px;
-            transition: all ease-in-out 0.25s;
-            filter: saturate(0);
-        }
-
-        .swiper-slide > img:hover,
-        .swiper-slide > video:hover {
-            cursor: url("./icons/bird-solid.svg"), auto;
-            filter: saturate();
-            scale: 1.1;
-        }
-
-        .swiper-button-next {
-            background-image: url("./icons/circle-right-solid.svg");
-            transition: all ease-in-out 0.25s;
-        }
-
-        .swiper-button-prev {
-            background-image: url("./icons/circle-left-solid.svg");
-            transition: all ease-in-out 0.25s;
-        }
-
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-            scale: 1.5;
-        }
-
-        @media screen and (max-width: 1440px) {
-
-            h1 {
-                font-size: 2.4rem;
-            }
-
-            .swiper-slide {
-                img, video {
-                    width: 600px;
-                }
-            }
-
-        }
-
-        @media screen and (max-width: 768px) {
-
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .swiper-slide {
-                img, video {
-                    width: 400px;
-                }
-            }
-
-        }
-
-        @media screen and (max-width: 425px) {
-
-            h1 {
-                font-size: 1.6rem;
-            }
-            
-            .swiper-slide {
-                img, video {
-                    width: 200px;
-                }
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <section>
-        <h1>NATURAL LANDSCAPES</h1>    
+        <h1>Natural Landscapes</h1>    
             <!-- Slider main container -->
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <img class="image" src="./media/hills.jpg" alt="">
+                    <img class="image" src="./media/hills.jpg" alt="Rocky Mountain range." draggable="false">
                 </div>
                 <div class="swiper-slide">
-                    <video class="video image" src="./media/drone.mp4" alt="">
+                    <video class="video image" src="./media/drone.mp4" alt="Bird's Eye View of a Reservoir." draggable="false">
                 </div>
                 <div class="swiper-slide">
-                    <img class="image" src="./media/coast.jpg" alt="">
+                    <img class="image" src="./media/coast.jpg" alt="Lake by Hills in Dagestan." draggable="false">
                 </div>
                 <div class="swiper-slide">
-                    <img class="image" src="./media/mountains.jpg" alt="">
+                    <img class="image" src="./media/mountains.jpg" alt="Green Mountain Range." draggable="false">
                 </div>
             </div>
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM217.4 376.9L117.5 269.8c-3.5-3.8-5.5-8.7-5.5-13.8s2-10.1 5.5-13.8l99.9-107.1c4.2-4.5 10.1-7.1 16.3-7.1c12.3 0 22.3 10 22.3 22.3l0 57.7 96 0c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32l-96 0 0 57.7c0 12.3-10 22.3-22.3 22.3c-6.2 0-12.1-2.6-16.3-7.1z"/></svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM294.6 135.1l99.9 107.1c3.5 3.8 5.5 8.7 5.5 13.8s-2 10.1-5.5 13.8L294.6 376.9c-4.2 4.5-10.1 7.1-16.3 7.1C266 384 256 374 256 361.7l0-57.7-96 0c-17.7 0-32-14.3-32-32l0-32c0-17.7 14.3-32 32-32l96 0 0-57.7c0-12.3 10-22.3 22.3-22.3c6.2 0 12.1 2.6 16.3 7.1z"/></svg>
+            </div>
         </div>
 
-        <button>
-            <svg xmlns="http://www.w3.org/2000/svg" height="14" width="15.75" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#202020" d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
-            <span>STOP</span>
+        <button id="mute">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#202020" d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+            <span>Mute</span>
         </button>
     </section>
 
-<script src="./script.js"></script>
-<script src="./swiper.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/swiper.js"></script>
 <script>
     var mySwiper = new Swiper('.swiper-container', {
     loop: true,

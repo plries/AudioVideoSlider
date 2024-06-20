@@ -1,0 +1,185 @@
+* {
+    font-family: "Poppins", Arial, Helvetica, sans-serif; 
+    font-size: 16px;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: hsla(0, 0%, 13%, 1);
+    background: linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);
+    background: -moz-linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);
+    background: -webkit-linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);  
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;    
+    flex-direction: column;     
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 3.2rem;
+    margin: 2.4rem 0;
+}
+
+button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 16px;
+    background: white;
+    margin: 2.4rem 0;
+    transition: all ease-in-out 0.25s;
+    svg > path {
+        transition: all ease-in-out 0.25s;
+    }
+    span {
+        transition: all ease-in-out 0.25s;
+        color: #202020;
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+button:hover {
+    background-color: #496f74;
+    svg > path {
+        fill: white;
+    }
+    span {
+        color: white;
+    }
+}
+
+.swiper-container {
+    text-align: center;
+    width: calc(90% - 20px);
+    background-color: #202020;
+    border-radius: 16px;
+    padding: 50px 0;
+}
+
+.swiper-slide > img,
+.swiper-slide > video {
+    width: 960px;
+    border-radius: 12px;
+    transition: all ease-in-out 0.25s;
+    filter: saturate(0);
+}
+
+.swiper-slide > img:hover,
+.swiper-slide > video:hover {
+    cursor: url("../icons/music-solid.svg"), auto;
+    filter: saturate();
+    scale: 1.1;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    transition: all ease-in-out 0.25s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    scale: 1.25;
+}
+
+.swiper-button-next > svg > path,
+.swiper-button-prev > svg > path{
+    transition: all ease-in-out 0.25s;
+}
+
+.swiper-button-next:hover > svg > path,
+.swiper-button-prev:hover > svg > path{
+    fill: #496f74;
+}
+
+@media screen and (max-width: 1440px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    button {
+    svg {
+        height: 20px;
+        width: 20px;
+    }
+    span {
+        font-size: 2rem;
+    }
+    }
+
+    .swiper-slide {
+        img, video {
+            width: 600px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    button {
+        gap: 12px;
+    svg {
+        height: 16px;
+        width: 16px;
+    }
+    span {
+        font-size: 1.6rem;
+    }
+    }
+    
+    .swiper-slide {
+        img, video {
+            width: 400px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        gap: 8px;
+    svg {
+        height: 14px;
+        width: 14px;
+    }
+    span {
+        font-size: 1.4rem;
+    }
+    }
+    
+    .swiper-slide {
+        img, video {
+            width: 200px;
+        }
+    }
+
+}
