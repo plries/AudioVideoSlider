@@ -8,10 +8,7 @@
 }
 
 body {
-    background: hsla(0, 0%, 13%, 1);
-    background: linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);
-    background: -moz-linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);
-    background: -webkit-linear-gradient(0deg, hsla(0, 0%, 13%, 1) 0%, hsla(180, 2%, 21%, 1) 100%);  
+    background: white;
 }
 
 section {
@@ -27,7 +24,7 @@ section {
 }
 
 h1 {
-    color: white;
+    color: #202020;
     font-weight: bold;
     font-size: 3.2rem;
     margin: 2.4rem 0;
@@ -45,7 +42,7 @@ button {
     border-radius: 4px;
     border: none;
     padding: 8px 16px;
-    background: white;
+    background: #202020;
     margin: 2.4rem 0;
     transition: all ease-in-out 0.25s;
     svg > path {
@@ -53,7 +50,7 @@ button {
     }
     span {
         transition: all ease-in-out 0.25s;
-        color: #202020;
+        color: white;
         font-weight: bold;
         font-size: 2rem;
         margin: 0;
@@ -62,12 +59,6 @@ button {
 
 button:hover {
     background-color: #496f74;
-    svg > path {
-        fill: white;
-    }
-    span {
-        color: white;
-    }
 }
 
 .toggle-button {
@@ -77,7 +68,7 @@ button:hover {
 .swiper-container {
     text-align: center;
     width: calc(90% - 20px);
-    background-color: #202020;
+    background-color: #e4e4e4;
     border-radius: 16px;
     padding: 50px 0;
 }
@@ -95,15 +86,16 @@ button:hover {
     cursor: url("../icons/music-solid.svg"), auto;
     filter: saturate();
     scale: 1.1;
-    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.25);
 }
 
 
 .swiper-button-next,
 .swiper-button-prev {
     transition: all ease-in-out 0.25s;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.25));
 }
 
 .swiper-button-next:hover,
@@ -114,11 +106,6 @@ button:hover {
 .swiper-button-next > svg > path,
 .swiper-button-prev > svg > path{
     transition: all ease-in-out 0.25s;
-}
-
-.swiper-button-next:hover > svg > path,
-.swiper-button-prev:hover > svg > path{
-    fill: #496f74;
 }
 
 @media screen and (max-width: 1440px) {
